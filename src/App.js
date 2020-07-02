@@ -1,9 +1,11 @@
 import DirectoryList from "ui/components/DirectoryList";
+import CustomHeader from "ui/components/CustomHeader";
+import "./index.scss";
 
 const URL =
     "https://e6di35qzm7.execute-api.us-west-2.amazonaws.com/latest/directory";
 
-/*const fetchOffersList = () => {
+/* const fetchOffersList = () => {
   fetch(URL)
   .then(response => response.json())
   .then( res => {
@@ -32,8 +34,8 @@ export default function App() {
 
     return (
         <>
-            <p class="py-4 text-lg text-center">Start here :) Good luck!</p>
-
+            {" "}
+            <CustomHeader />
             <DirectoryList offerList={offerList} />
         </>
     );

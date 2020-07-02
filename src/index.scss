@@ -1,1 +1,57 @@
-// This is a sample stylesheet, if you're going to use it don't forget to import it.
+// colors
+$main-blue: #2b53fb;
+$pastel-blue: #9ec1f7;
+$light-blue: #f2f7ff;
+$white: #fbfbfb;
+$black: #030303;
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+    background-color: darken($light-blue, 7%);
+    font-family: "Poppins", sans-serif;
+}
+
+h3 {
+    color: $black;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+p {
+    font-weight: 200;
+    color: $black;
+}
+
+.custom-header {
+    background-color: $white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px 0 darken($pastel-blue, 30%);
+    height: 3.5em;
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+
+    > h2 {
+        color: $main-blue;
+        font-size: 1.8em;
+        font-weight: 600;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+    }
+}
+
+.offer-container {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px -5px darken($pastel-blue, 25%);
+    position: relative;
+    height: 100%;
+}
