@@ -1,16 +1,11 @@
 # ReWorth Coding Challenge: fullstack
 
-![Build](https://github.com/appuntos/fullstack-challenge/workflows/Build/badge.svg?branch=master)
+## Let's Begin! 🚀
 
-> Little coding challenge for our hiring process.
-> Involves React components and API integration tasks.
-
-## Getting started
-
-To get stated clone project and install dependencies.
+To get started clone project and install dependencies.
 
 ```{.bash}
-git clone https://github.com/appuntos/fullstack-challenge
+git clone https://github.com/JazminDominguez/fullstack-challenge
 ```
 
 ```{.bash}
@@ -25,89 +20,65 @@ command in a separate terminal session, I recommend using tmux)
 npm start
 ```
 
-## Possible pitfalls and sources of confusion
+## Construction process 👷🏽‍♀️
 
-**BEWARE!!** This project uses **global default imports** and **import
-aliases**. What that means is that some modules are imported default
-with default names. To avoid lots of headache be sure not to define
-variables with the folowing names(as these exist in the global
-namespace for all project files):
+### Requirement Analysis
 
--   store (this a reference the redux store)
--   log (this is a global reference to loglevel)
+        Understand the requerements and expectations of the challenge.
 
-Furthermore, react and { useState } are imported by default globally.
-So.. **do not include this code in any file**:
+### Taks Planification
 
-```{.javascript org-language="js"}
-import React from 'react';
-```
+To get the job done i divided the challenge into small tasks. Each task it's followed by a serie of smaller tasks to get them done:
 
-**Or**
+_Display the offers in a list using the data available from the API_
 
-```{.javascript org-language="js"}
-import React, { useState } from 'react';
-```
+-   Perform a GET request to the API and fetch the offer array when the component mounts (UseEffect Hook).
+-   Pass the array of offers as props to the DocumentDirectoryList.
+-   Map the props to generate an automatic list. Show name and created date.
+-   Print list on window.
 
-See the package.json file for this project. Auto-imports are definded
-under _babel plugins_ and look like this:
+_Apply Styles and Design UI_
 
-```{.javascript org-language="js"}
-"babel": {
-    "plugins": [
-        "auto-import",
-        {
-            "declarations": [
-                {
-                    "default": "React",
-                    "path": "react",
-                    "members": [
-                        "useState"
-                    ]
-                },
-                ...
-            }
-        }
-    }
-}
-```
+-   Sketch the list design. Use Reworth Colors. Mobile First.
+-   Get Reworth's color from their site.
+-   Add Component Library and Flexbox ( Rebass: Quick, mobile-first responsive styles with array-based syntax )
+-   Use Sass for color variables and styles.
 
-**BEWARE!! This list of default imports is subject to change! check the actual file for changes**
+_Change date format from Unix to es-MX format_
 
-## Style guide
+-   Read about unix time convertion.
+-   Apply date convertion on map so the API doesn't get directly modify.
+-   Add styles to fit better the list/card.
 
-All code introduced to this project should follow the following
-guidelines:
+_Add pagination_
 
-1.  Code should prefer functions over classes at all costs. See [the
-    docs](https://reactjs.org/docs/hooks-intro.html) for details on
-    using functional components in React.
+-   Check Api endpoint to know how to apply paggination filters.
+-   Add useState [page, setPage] with default value od 1.
+-   Add filters to URL endpoint. (Bring 10 items per page, 3 pages in total).
+-   Add Pagination buttons with setState on click so API gets called again.
 
-## Instructions
+_Check & Run_
 
-Please read the following instructions carefully and if you have any questions please address them to whom sent the challenge:
+-   Check for errors and console.logs out of place.
 
-> Take a minute to analyze the project set up and locate everything you need
+## Tools and Libraries 📚📖
 
-1.  Fork this repo
-2.  Using the canvas project, implement the following requirements:
+For this challenge i added [Rebass](https://rebassjs.org/) as Component/UI Library.
 
--   Connect to the ReWorth API with help from the provided documentation (No authentication needed for this exercise) https://docs.google.com/document/d/1ckJwM6Uy25uAZL8ja4PlzYE_iusgb5cWgpL0mTjT6Rw
--   Perform a GET request to the directory and fetch the offer array
--   Display the offers in a list using the data you have available from the API (get creative)
--   Based on the colors of ReWorth, make it look cool. No design is provided but a nice UI is expected
--   Create as many components or assets as you need, be careful to organize the files in a clear way and use comments when necessary
+**Why Rebass?**
+Rebass is a component library with a Flexbox layout. It has predefined breakpoints and has an array-like inline-style. Thanks to this sintax Rebass can set the grid and UI fast and with lesser clasess and css- code for small projects.
 
-3.  You can use and install npm libraries if needed, please provide a reasoning for your choices, you can use a component library or create custom components.
-4.  Optimize and check your code for errors
-5.  When you're ready, push your solution to your forked repo and let us know via email!
-6.  **Bonus** Implement list ordering by any of the object attributes and explain how you did it
-
--   We'll evaluate the overall solution, so take time to optimize and document your code. We take into consideration the following points: Coding practices and standards, code optimization, does it run/work?, Documentation and reasoning behind your solution.
--   If you have any questions or issues running the cample project please let us know ASAP so we can get you help.
+[Rebass site](https://rebassjs.org/)
+[Rebass github](https://github.com/rebassjs/rebass)
 
 ## Technologies Used
 
 -   Reactjs
 -   Parcel
 -   Babel
+-   Sass
+-   Rebass
+
+## Developer 🧑🏽‍🤝‍🧑🏽
+
+_Jaz Dominguez_
