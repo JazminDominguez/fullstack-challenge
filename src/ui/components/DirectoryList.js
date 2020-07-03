@@ -5,8 +5,8 @@ export default function DirectoryList({ offerList, ...props }) {
 
     const mapOfferList = offerList.map(offer => {
         // converts timestamp to date using toLocalDateString (spanish - Mexico format)
-        let unixTime = offer.created;
-        let date = new Date(unixTime * 1000);
+        const unixTime = offer.created;
+        const date = new Date(unixTime * 1000);
 
         return (
             <Box
@@ -30,7 +30,8 @@ export default function DirectoryList({ offerList, ...props }) {
             flexWrap="wrap"
             flexDirection={["column", "row"]}
             justifyContent="center"
-            mx={[4, 5]}>
+            mx={[4, 5]}
+            my={[2]}>
             {mapOfferList}
         </Flex>
     );

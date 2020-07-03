@@ -11,6 +11,7 @@ $black: #030303;
 body {
     background-color: darken($light-blue, 7%);
     font-family: "Poppins", sans-serif;
+    position: relative;
 }
 
 h3 {
@@ -60,4 +61,32 @@ p {
     box-shadow: 0 10px 25px -5px darken($pastel-blue, 25%);
     position: relative;
     height: 100%;
+}
+
+.pagination-container {
+    width: 40%;
+    height: auto;
+    text-align: center;
+    background-color: $white;
+    color: $main-blue;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin: 1em 0;
+
+    > button {
+        width: 1.3em;
+        height: 1.3em;
+        font-size: 0.9em;
+        padding: 0px;
+        margin: 10px;
+
+        &.-active {
+            background-color: $main-blue;
+            color: $white;
+            border-radius: 20px;
+        }
+    }
 }
