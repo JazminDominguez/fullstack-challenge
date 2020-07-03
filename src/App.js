@@ -14,7 +14,6 @@ export default function App() {
             .then(response => response.json())
             .then(res => {
                 setOfferList(res.data);
-                console.log(res);
             })
             .catch(err => {
                 console.log(err);
