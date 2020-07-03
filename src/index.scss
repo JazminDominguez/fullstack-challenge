@@ -15,8 +15,9 @@ body {
 
 h3 {
     color: $black;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
+    padding: 5px;
 }
 
 h4 {
@@ -27,6 +28,11 @@ h4 {
 p {
     font-weight: 200;
     color: $black;
+}
+
+h4,
+p {
+    font-size: 0.8em;
 }
 
 .custom-header {
